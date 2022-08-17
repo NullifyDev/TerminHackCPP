@@ -1,6 +1,5 @@
 #include <map>
 #include <vector>
-#include "commandhandler.h"
 #include "commands/echo.h"
 
 void Handler(std::string cmd, std::vector<std::string> args) {

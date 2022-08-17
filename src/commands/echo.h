@@ -1,6 +1,8 @@
 #ifndef ECHO_H 
 #define ECHO_H
 #include "../commandhandler.h"
+#include "../system/cpp.h"
+
 class Echo : public Command {
     public:
     bool AppliesTo(std::string cmd) {  return cmd == "echo"; }
@@ -8,7 +10,7 @@ class Echo : public Command {
         using namespace std; string msg = "";
         
         for (auto arg : args) { msg += arg + " "; }
-        cout << msg << endl;
+        Utils::WriteLine(msg);
     }
 };
 #endif

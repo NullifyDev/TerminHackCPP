@@ -1,4 +1,6 @@
 #! /bin/sh -e
 clear
-g++ main.cpp src/system/cpp.cpp src/commandhandler.cpp -o bin/terminhack
+g++ -o bin/terminhack \
+    main.cpp \
+    src/commandhandler.cpp
 ./bin/terminhack

@@ -1,5 +1,14 @@
 #ifndef CPP_H
 #define CPP_H
+
+#include <cstdio>
+#include <cstring>
 #include <vector>
-std::vector<char*> splitStr(const char *str, const char *delim);
+#include <iostream>
+#include <string>
+
+namespace Utils{
+    void WriteLine(std::string msg);
+    std::vector<char*> SplitStr(const char *str, const char *delim);
+}
 #endif
