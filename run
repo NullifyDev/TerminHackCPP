@@ -1,0 +1,4 @@
+#! /bin/sh -e
+clear
+g++ main.cpp src/system/cpp.cpp src/commandhandler.cpp -o bin/terminhack
+./bin/terminhack
