@@ -8,12 +8,12 @@ Desktop:
     - Windows
     - [TBS] MacOS (To be Supported)
 
-[TBS] Mobile:
+Mobile (TBS):
     - Android 
     - IOS (To be Supported)
 
 
-[TBS] Console (to be added as a major update after initial release):
+Console (TBS as a major update after full release):
     - Microsoft XBox
     - PlayStation 1-5
     - Nintendo
