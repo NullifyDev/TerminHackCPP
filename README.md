@@ -11,4 +11,4 @@ TerminHack is a game that is made tp simulate and simplify hacking and programmi
 
 
 ## Developers:
-- [Nullify](https://github.com/NullifyDev/) [Main Developer - Mobile and Destop]
+- [Nullify](https://github.com/NullifyDev/) [Main Developer - Mobile and Destop] 
