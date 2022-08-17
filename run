@@ -1,7 +1,14 @@
 #! /bin/sh -e
 clear
 g++ -o bin/terminhack \
+    # root
     main.cpp \
-    src/system/cpp.cpp \
-    src/commandhandler.cpp
+    
+    src/commandhandler.cpp \
+
+    src/commands/echo.cpp \
+
+    src/system/cpp.cpp 
+
+
 ./bin/terminhack
