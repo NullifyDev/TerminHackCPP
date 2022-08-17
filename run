@@ -2,5 +2,6 @@
 clear
 g++ -o bin/terminhack \
     main.cpp \
+    src/system/cpp.cpp \
     src/commandhandler.cpp
 ./bin/terminhack
