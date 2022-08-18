@@ -6,7 +6,17 @@
 
 
 namespace Utils {
-    void WriteLine(std::string msg) { std::cout << msg << std::endl; }
+    void Write(std::string msg) { 
+        for (auto x : msg ) {
+            std::cout.put(x);
+        }
+    }
+    void WriteLine(std::string msg) { 
+        for (auto x : msg ) {
+            std::cout.put(x);
+        }
+        std::cout.put('\n');
+    }
     std::vector<char*> SplitStr(const char *str, const char *delim) {
         std::vector<char*> arr;
         char *tok = strtok(strdup(str), delim);

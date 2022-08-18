@@ -8,9 +8,11 @@ class Echo : public Command {
     bool AppliesTo(std::string cmd) {  return cmd == "echo"; }
     void Handle(std::vector<std::string> args) {
         using namespace std; string msg = "";
-        
+        cout << "ECHO CALLED!" << endl;
+
         for (auto arg : args) { msg += arg + " "; }
-        Utils::WriteLine(msg);
+        // Utils::WriteLine(msg);
+        // cout << msg << endl;
     }
 };
 #endif
