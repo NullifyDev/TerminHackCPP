@@ -1,0 +1,10 @@
+{
+    "Player": {
+        "Router": "172.12.48.122",
+        "Device": "1A:3E:5F:9D"
+    },
+    "ConnectedTo": {
+        "Router": "172.12.48.122",
+        "Device": "1A:3E:5F:9D"
+    }
+}

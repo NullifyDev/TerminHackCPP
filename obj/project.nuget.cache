@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sLI7EJYKcZSMcDggmwN+x0EQ7hcWyqdWDQ/S7W+w7grp8wWvmxymAJEEHuquIvksAcBEggq2B3oVshqefw21/w==",
+  "success": true,
+  "projectFilePath": "/home/velox/TerminHackCpp/TerminHackCpp.csproj",
+  "expectedPackageFiles": [
+    "/home/velox/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

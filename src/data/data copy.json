@@ -1,0 +1,67 @@
+{
+    "user": "root@ramdahl",
+    "password": "root",
+    "filesystem": {
+        "current": {
+            "type": "folder",
+            "name": "home",
+            "contents": [
+                {
+                    "type": "folder",
+                    "name": "Documents",
+                    "contents": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                }
+            ]
+            ]
+        },
+        "root": [
+            {
+                "type": "folder",
+                "name": "home",
+                "contents": [
+                    {
+                        "type": "folder",
+                        "name": "test",
+                        "contents": [
+                            {
+                                "type": "file",
+                                "name": "test.txt",
+                                "contents": "test"
+                            },
+                            {
+                                "type": "folder",
+                                "name": "test2",
+                                "contents": [
+                                    {
+                                        "type": "file",
+                                        "name": "test2.txt",
+                                        "contents": "test2"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "folder",
+                                "name": "test3",
+                                "contents": [
+                                    {
+                                        "type": "folder",
+                                        "name": "test57",
+                                        "contents": [
+                                            {
+                                                "type": "file",
+                                                "name": "test57.txt",
+                                                "contents": "test57"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+}
+}

@@ -1,5 +1,5 @@
-#ifndef CPP_H
-#define CPP_H
+#ifndef CPP_HPP
+#define CPP_HPP
 
 #include <cstdio>
 #include <cstring>

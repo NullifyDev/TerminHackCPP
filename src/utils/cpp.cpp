@@ -6,12 +6,12 @@
 
 
 namespace Utils {
-    void Write(std::string msg) { 
+    void Write(std::string msg = "") { 
         for (auto x : msg ) {
             std::cout.put(x);
         }
     }
-    void WriteLine(std::string msg) { 
+    void WriteLine(std::string msg = "") { 
         for (auto x : msg ) {
             std::cout.put(x);
         }

@@ -1,26 +1,39 @@
 #include <iostream>
-#include "src/system/cpp.h"
-#include "src/commandhandler.h"
+#include "src/utils/cpp.hpp"
+#include "src/commandhandler.hpp"
+#include "src/utils/json.hpp"
 
 int main(int argc, char *argv[]) {
+    
+    // Initiate Namespace Tools
+    #pragma region Tools
+    using namespace std;
     using namespace Utils;
-    WriteLine("/////////// [START] ///////////");
+    using namespace CHandler;
+    #pragma endregion
 
-    while(true) {
-        using namespace std;
-        using namespace Utils;
-        
+    // Initiate Player Information
+    #pragma region PlayerInfo
+    // auto routerip = Json::Read("src/network/playerpointer.json")["ConnectedTo"]["Router"].dump();
+    // auto deviceip = Json::Read("src/network/playerpointer.json")["ConnectedTo"]["Device"].dump();
+    #pragma endregion
+
+
+    WriteLine("Faraware Ramdahl [Version 1.0]");
+    WriteLine("Copyright (C) Faraware Corporation 2022. Rights reserved.");
+    WriteLine("");
+
+    while (true)
+    {
         string input;
-        Utils::Write("root@ramdahl:~# ");
-        cin >> input;
-        input+= "\n";
-        Utils::WriteLine("Terminal Input: " + input);
-        if (!input.size() || input.size() != 0) {
-            vector<char*> args = SplitStr(input.c_str(), " ");
-            // CommandHandler::Handle(args);
-        }
+        Write("root@ramdahl:~# ");
+        getline(cin, input = " ");
+        if (input.size() > 0) {
+            std::string cmd = input.substr(0, input.find(' '));
+            vector<char*> args = SplitStr(input.c_str(), " "); 
+            args.erase(args.begin());
+            CHandler::Handler(cmd, args);
+        } 
     }
-
-
     return 0;
 }

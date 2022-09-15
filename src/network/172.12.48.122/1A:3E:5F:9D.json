@@ -1,0 +1,52 @@
+{
+    "name": "root",
+    "children": [
+        {
+            "name": "ramdahl",
+            "children": [
+                {
+                    "name": "Desktop",
+                    "type": "folder",
+                    "children": [
+                        {
+                            "name": "readme",
+                            "type": "txt",
+                            "content": "This is a readme.txt file that is used for testing the commands 'cd', 'ls' and 'cat'"
+                        }
+                    ]
+                },
+                {
+                    "name": "Documents",
+                    "type": "folder",
+                    "children": [
+                        {
+                            "name": "Test",
+                            "type": "folder",
+                            "children": []
+                        },
+                        {
+                            "name": "readthis",
+                            "type": "txt",
+                            "content": "This is a readme.txt file that is used for testing the commands 'cd', 'ls' and 'cat'"
+                        }
+                    ]
+                },
+                {
+                    "name": "Music",
+                    "type": "folder",
+                    "children": []
+                },
+                {
+                    "mame": "Trash",
+                    "type": "folder",
+                    "children": []
+                },
+                {
+                    "name": "Videos",
+                    "type": "folder",
+                    "children": []
+                }
+            ]
+        }
+    ]
+}

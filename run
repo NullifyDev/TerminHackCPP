@@ -3,8 +3,7 @@ clear
 g++ -o bin/terminhack \
     main.cpp \
     src/commandhandler.cpp \
-    src/commands/echo.cpp \
-    src/system/cpp.cpp 
-
+    src/utils/cpp.cpp \
+    src/utils/json.cpp 
 
 ./bin/terminhack

@@ -1,0 +1,33 @@
+{
+    "user": "root@ramdahl",
+    "password": "root",
+    "filesystem": {
+        "current": {
+            "folder": "/home/root/test"
+        },
+        "paths": [
+            {
+                "path": "/home/root/test",
+                "contents": [
+                    {
+                        "type": "file",
+                        "name": "test.txt",
+                        "size": "10"
+                    },
+                    {
+                        "path": "/home/root/test/test",
+                        "type": "folder",
+                        "name": "test",
+                        "content": [
+                            {
+                                "type": "file",
+                                "name": "memo.txt",
+                                "size": "10"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
