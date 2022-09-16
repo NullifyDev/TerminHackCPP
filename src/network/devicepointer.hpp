@@ -16,6 +16,7 @@ namespace Network {
     }
 
     void SetConnectedDevice(std::string routerip, std::string deviceip) {
+        // connect 192.168.12.25 A1:B2:C3:D4
         using json = nlohmann::json;
         using namespace Utils;
         json jdata = Json::Read("src/network/playerpointer.json");
@@ -26,15 +27,6 @@ namespace Network {
         std::vector<char*> splitdeviceip = SplitStr(deviceip.c_str(), ".");
 
         bool isValid = DHCP::ipv4::Validate(splitrouterip);
-
-        for (std::string x : splitdeviceip) {
-            if (x.length() != 2) {
-                WriteLine("Error: Invalid MAC Address - Illegal value");
-                return;
-            }
-            // if (x.find('[') != std::string::npos)
-        }
-        // std::vector<char*> splitrip = SplitStr(input.c_str(), "."); 
 
         // validate IPv4 format
         WriteLine("Before: " + jdata.dump(4));
