@@ -11,30 +11,26 @@ namespace Network {
     void GetDevice() {
         using namespace Json;
         using namespace Utils;
-        auto routerip = Json::Read("src/network/playerpointer.json")["Player"]["Router"].dump(4);
-        auto deviceip = Json::Read("src/network/playerpointer.json")["Player"]["Device"].dump(4);
+        std::string deviceip = Json::Read("src/network/networkpointer.json")["Player"]["Device"].dump(4);
+        std::string routerip = Json::Read("src/network/networkpointer.json")["Player"]["Router"].dump(4);
     }
 
-    void SetConnectedDevice(std::string routerip, std::string deviceip) {
+    void SetConnectedDevice(char * routerip, std::string deviceip) {
         // connect 192.168.12.25 A1:B2:C3:D4
         using json = nlohmann::json;
         using namespace Utils;
-        json jdata = Json::Read("src/network/playerpointer.json");
-        WriteLine(jdata.dump(4));
 
+        json jdata = Json::Read("src/network/networkpointer.json");
 
-        std::vector<char*> splitrouterip = SplitStr(routerip.c_str(), ".");
-        std::vector<char*> splitdeviceip = SplitStr(deviceip.c_str(), ".");
-
+        std::vector<char *> splitrouterip = SplitStr(routerip, ".");
         bool isValid = DHCP::ipv4::Validate(splitrouterip);
 
-        // validate IPv4 format
-        WriteLine("Before: " + jdata.dump(4));
+        WriteLine("isValid: " + isValid);
 
-
-        jdata["ConnectedTo"] = { {"Router", routerip}, {"Device", deviceip} };
-        WriteLine(jdata["ConnectedTo"].dump(4));
-        Json::Write("src/network/playerpointer.json", jdata.dump(4));
+        if (isValid == true) {
+            jdata["ConnectedTo"] = { {"Router", routerip}, {"Device", deviceip} };
+            Json::Write("src/network/networkpointer.json", jdata.dump(4));
+        }
     }
 };
 

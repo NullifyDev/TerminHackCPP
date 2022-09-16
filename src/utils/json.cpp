@@ -1,8 +1,9 @@
-#include <fstream>
 #include "cpp.hpp"
 #include <iostream>
 #include <fstream>
 #include <nlohmann/json.hpp>
+
+
 
 using json = nlohmann::json;
 
@@ -21,10 +22,11 @@ namespace Json {
         return data;
     }
 
-    std::string Write(std::string path, std::string content) {
+    void Write(std::string path, std::string content) {
         using namespace std;
-        ofstream file(path);
+        ofstream file;
+        file.open (path);
         file << content;
-        return "Done";
+        file.close();
     }
 }

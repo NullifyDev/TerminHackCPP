@@ -10,12 +10,19 @@ int main(int argc, char *argv[]) {
     using namespace std;
     using namespace Utils;
     using namespace CHandler;
+    using json = nlohmann::json;
     #pragma endregion
 
     // Initiate Player Information
     #pragma region PlayerInfo
-    // auto routerip = Json::Read("src/network/playerpointer.json")["ConnectedTo"]["Router"].dump();
-    // auto deviceip = Json::Read("src/network/playerpointer.json")["ConnectedTo"]["Device"].dump();
+    using json = nlohmann::json;
+
+        #pragma region SetInitConnectedDevice
+        auto jdata = Json::Read("src/network/networkpointer.json");
+        jdata["ConnectedTo"] = jdata["Player"];
+        Json::Write("src/network/networkpointer.json", jdata.dump(4));
+        #pragma endregion
+
     #pragma endregion
 
 
