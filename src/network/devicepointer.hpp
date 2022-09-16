@@ -34,7 +34,7 @@ namespace Network {
 
         jdata["ConnectedTo"] = { {"Router", routerip}, {"Device", deviceip} };
         WriteLine(jdata["ConnectedTo"].dump(4));
-        return Json::Write("src/network/playerpointer.json", jdata.dump(4));
+        Json::Write("src/network/playerpointer.json", jdata.dump(4));
     }
 };
 

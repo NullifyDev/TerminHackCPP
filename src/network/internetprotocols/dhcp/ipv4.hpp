@@ -32,6 +32,7 @@ namespace DHCP
                 WriteLine("Error: Invalid IPv4 Address - Invalid Address");
                 return false;
             }
+            return false;
         }
         // bool Generate();
     };
