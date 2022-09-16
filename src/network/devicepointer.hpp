@@ -23,11 +23,11 @@ namespace Network {
         json jdata = Json::Read("src/network/networkpointer.json");
 
         std::vector<char *> splitrouterip = SplitStr(routerip, ".");
-        bool isValid = DHCP::ipv4::Validate(splitrouterip);
 
+        bool isValid = DHCP::ipv4::Validate(splitrouterip);
         WriteLine("isValid: " + isValid);
 
-        if (isValid == true) {
+        if (isValid) {
             jdata["ConnectedTo"] = { {"Router", routerip}, {"Device", deviceip} };
             Json::Write("src/network/networkpointer.json", jdata.dump(4));
         }

@@ -33,7 +33,7 @@ namespace DHCP
                 WriteLine("Error: Invalid IPv4 Address - Incorrect Format");
                 return false;
             }
-            return false;
+            return true;
         }
         // bool Generate();
     };

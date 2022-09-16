@@ -15,14 +15,7 @@ int main(int argc, char *argv[]) {
 
     // Initiate Player Information
     #pragma region PlayerInfo
-    using json = nlohmann::json;
-
-        #pragma region SetInitConnectedDevice
-        auto jdata = Json::Read("src/network/networkpointer.json");
-        jdata["ConnectedTo"] = jdata["Player"];
-        Json::Write("src/network/networkpointer.json", jdata.dump(4));
-        #pragma endregion
-
+        CHandler::Handler("disconnect", {});
     #pragma endregion
 
 

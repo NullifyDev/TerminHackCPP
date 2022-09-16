@@ -6,5 +6,6 @@
 #include "exit.hpp"
 #include "ls.hpp"
 #include "connect.hpp"
+#include "disconnect.hpp"
 
 #endif

@@ -14,7 +14,8 @@ namespace CHandler {
             { "clear", new Clear },
             { "exit", new Exit },
             { "ls", new Ls },
-            { "connect", new Connect } 
+            { "connect", new Connect },
+            { "disconnect", new Disconnect }
         };
         
         if (_commandHandler.find(cmd) != _commandHandler.end()) {
